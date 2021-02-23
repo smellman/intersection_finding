@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "Taro Matsuzawa <btm@tech.email.ne.jp> (https://smellman.hatenablog.com/)",
-  "license": "ISC",
+  "license": "MIT",
   "browserslist": {
     "production": [
       "last 3 chrome versions",
