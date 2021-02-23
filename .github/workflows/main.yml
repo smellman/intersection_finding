@@ -23,7 +23,7 @@ jobs:
     - name: Install NPM packages
       run: npm install
     - name: run build
-      run: npx parcel build index.html --public-url ./intersection_finding/
+      run: npx parcel build index.html --public-url .
     - name: Deploy website
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
