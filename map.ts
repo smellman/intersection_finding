@@ -1,5 +1,6 @@
 import { Map, GeoJSONSource, MapboxGeoJSONFeature } from 'maplibre-gl'
-import * as turf from '@turf/turf'
+import lineIntersect from '@turf/line-intersect'
+import { featureCollection } from '@turf/helpers'
 
 const map = new Map({
   container: 'map',
@@ -9,7 +10,7 @@ const map = new Map({
 })
 
 map.on('load', () => {
-  let intersections = turf.featureCollection([]) as any
+  let intersections = featureCollection([]) as any
   map.addSource('intersections', {
     type: 'geojson',
     data: intersections
@@ -44,13 +45,13 @@ map.on('load', () => {
         if (i == j) {
           return
         }
-        const point = turf.lineIntersect(cur, target)
+        const point = lineIntersect(cur, target)
         if (point.features.length > 0) {
           points.push(point.features[0])
         }
       })
     })
-    intersections = turf.featureCollection(points)
+    intersections = featureCollection(points)
     const source = map.getSource('intersections') as GeoJSONSource
     source.setData(intersections)
   })
