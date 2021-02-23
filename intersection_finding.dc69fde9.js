@@ -14,4 +14,4 @@ var t,e=require("process");!function(e,n){"object"==typeof exports&&"undefined"!
 },{"maplibre-gl":"rZaG","@turf/turf":"Va9F"}],"QCba":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("./map"));console.log(t.default);
 },{"./map":"YIPn"}]},{},["QCba"], null)
-//# sourceMappingURL=/intersection_finding.dc69fde9.js.map
+//# sourceMappingURL=intersection_finding/intersection_finding.dc69fde9.js.map
