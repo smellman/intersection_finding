@@ -22,8 +22,8 @@ jobs:
           ${{ runner.os }}-node_modules-
     - name: Install NPM packages
       run: npm install
-    - name: npm run build
-      run: npm run build
+    - name: run build
+      run: npx parcel build index.html --public-url ./intersection_finding/
     - name: Deploy website
       uses: peaceiris/actions-gh-pages@v3.7.3
       with:
